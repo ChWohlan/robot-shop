@@ -21,10 +21,10 @@ RUN rm /docker-entrypoint-initdb.d/*
 #    chmod -R g=u /var/run
 
 # MOUNT /var/lib/mysql
-#RUN chgrp -R 0 /var/lib/mysql && \
-#    chmod -R g=u /var/lib/mysql
+RUN chgrp -R 0 /var/lib/mysql && \
+    chmod -R g=u /var/lib/mysql
 
-# EXPOSE 3306
+EXPOSE 3306
 # USER 27
 
-# USER 1001
+USER 1001
